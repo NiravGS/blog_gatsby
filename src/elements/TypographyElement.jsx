@@ -41,17 +41,17 @@ export const P = Styled.p`
     color:${props => {
       switch (props.color) {
         case "dark1":
-          return props.theme.colors.dark1
+          return props.theme.color.dark1
         case "dark2":
-          return props.theme.colors.dark2
+          return props.theme.color.dark2
         case "dark3":
-          return props.theme.colors.dark3
+          return props.theme.color.dark3
         case "light1":
-          return props.theme.colors.light1
+          return props.theme.color.light1
         case "light2":
-          return props.theme.colors.light2
+          return props.theme.color.light2
         default:
-          return props.theme.colors.dark1
+          return props.theme.color.dark1
       }
     }};
     text-align:${props => (props.textAlign ? props.textAlign : "left")}
@@ -60,4 +60,47 @@ export const P = Styled.p`
 export const H1 = Styled.h1`
     font-size:2.25rem;
     line-heigth :2.5rem
+    color:${props => {
+      switch (props.color) {
+        case "dark1":
+          return props.theme.color.dark1
+        case "dark2":
+          return props.theme.color.dark2
+        case "dark3":
+          return props.theme.color.dark3
+        case "light1":
+          return props.theme.color.light1
+        case "light2":
+          return props.theme.color.light2
+        default:
+          return props.theme.color.dark1
+      }
+}};
+    font-weight:400;
+    text-align:${props => (props.textAlign ? props.textAlign : "left")}
+    margin:${props => (props.margin ? props.margin : 0)};
+`
+
+export const H2 = Styled.h2`
+    font-size:1.5rem;
+    line-heigth :1.875rem
+    color:${props => {
+      switch (props.color) {
+        case "dark1":
+          return props.theme.color.dark1
+        case "dark2":
+          return props.theme.color.dark2
+        case "dark3":
+          return props.theme.color.dark3
+        case "light1":
+          return props.theme.color.light1
+        case "light2":
+          return props.theme.color.light2
+        default:
+          return props.theme.color.dark1
+      }
+}};
+    font-weight:400;
+    text-align:${props => (props.textAlign ? props.textAlign : "left")};
+    margin:${props => (props.margin ? props.margin : 0)};
 `
