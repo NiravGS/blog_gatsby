@@ -1,5 +1,5 @@
 exports.createPages = async function ({ action, graphql }) {
-  const { data } = await graphql`
+  const { data } = await graphql(`
     query {
       allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
@@ -12,7 +12,7 @@ exports.createPages = async function ({ action, graphql }) {
         }
       }
     }
-  `
+  `)
 
   //    create paginated pages for posts
 
@@ -38,7 +38,7 @@ exports.createPages = async function ({ action, graphql }) {
   // data.allMdx.edges.forEach(edges =>{
   //     const slug = edges.node.frontmatter.slug
   //     const id = edges.node.id
-  //     action.createPages({
+  //     action.createPage({
   //         path:slug,
   //         component:require.resolve(`.src/templates/singlePost.js`),
   //         context:{id},
